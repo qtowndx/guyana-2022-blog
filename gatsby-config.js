@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Guyana 2020 Blog`,
+    title: `Guyana 2022 Blog`,
     author: {
       name: `Kyle Mathews`,
       summary: `who lives and works in San Francisco building useful things.`,
