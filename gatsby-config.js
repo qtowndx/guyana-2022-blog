@@ -2,11 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Guyana 2022 Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Dexter Semple`,
+      summary: `travelling to Guyana with the family.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A travel blog, travelling to Guyana.`,
+    siteUrl: `http://www.blog.myqueenstown.org`,
     social: {
       twitter: `kylemathews`,
     },
@@ -36,6 +36,27 @@ module.exports = {
             options: {
               maxWidth: 630,
             },
+          },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 800,
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              height: 400, // Optional: Overrides optional.ratio
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+              loadingStrategy: 'lazy', //Optional: Enable support for lazy-load offscreen iframes. Default is disabled.
+              urlOverrides: [
+                {
+                  id: "youtube",
+                  embedURL: videoId =>
+                    `https://www.youtube-nocookie.com/embed/${videoId}`,
+                },
+              ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
+              containerClass: "embedVideo-container", //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+              iframeId: false, //Optional: if true, iframe's id will be set to what is provided after 'video:' (YouTube IFrame player API requires iframe id)
+            },
+             
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
